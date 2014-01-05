@@ -7,7 +7,11 @@ This branch of the weaver engine framework is based on Node and Lua. The app fra
 
 ## Install
 
-Prereq: NPM, Bower, Grunt, Lua, Pluto
+Prereq: NPM, Bower, Grunt, Lua, Pluto, and Busted
+
+
+heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+
 
 
 ## To improve
@@ -21,6 +25,13 @@ https://code.google.com/p/gyp/wiki/GypUserDocumentation\
 
 
 https://github.com/andzdroid/mongo-express
+
+
+Eventually get  Travis working with Lua unit tests:
+
+http://thejacklawson.com/2012/09/lua-testing-with-busted-and-travis-ci/index.html
+
+And get a combined Node/Lua buildback going
 
 
 ## License
