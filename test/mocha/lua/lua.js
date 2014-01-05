@@ -44,12 +44,12 @@ describe('<Unit Test>', function() {
 
             it('should serialize and deserialize a coroutine correctly', function(done) {
                 var result = luaState.doFile(luaFile, function(error, ret_value){
-                should.not.exist(error);
-                should.ok(ret_value);
-                should(ret_value.a['5']).equal(5);
-                should(ret_value.b['1']).equal(6);
-                should(ret_value.b['5']).equal(10);
-                done();
+                    should.not.exist(error);
+                    should.ok(ret_value);
+                    should(ret_value.a['5']).equal(5);
+                    should(ret_value.b['1']).equal(6);
+                    should(ret_value.b['5']).equal(10);
+                    done();
                 });
             });
 

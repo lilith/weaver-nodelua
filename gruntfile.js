@@ -77,6 +77,21 @@ module.exports = function(grunt) {
             unit: {
                 configFile: 'test/karma/karma.conf.js'
             }
+        },
+        busted: {
+            folders: ['test/busted'],
+            pattern: '.lua',
+
+        }
+    });
+
+    var shell = require('shelljs');
+
+    grunt.registerTask('busted:test', "Run lua unit tests", function() {
+        var folders = grunt.config('busted.src') || ['test/busted'];
+        var pattern = grunt.config('busted.pattern') || '.lua';
+        for (var i = 0; i < folders.length; i++){
+          shell.exec('busted -p \'' + pattern + '\' '  + folders[i]);
         }
     });
 
@@ -96,5 +111,5 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['jshint', 'concurrent']);
 
     //Test task.
-    grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit']);
+    grunt.registerTask('test', ['env:test', 'mochaTest', 'karma:unit', 'busted:test']);
 };
