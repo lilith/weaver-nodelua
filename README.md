@@ -7,7 +7,20 @@ This branch of the weaver engine framework is based on Node and Lua. The app fra
 
 ## Install
 
+Prereq: NPM, Bower, Grunt, Lua, Pluto
 
+
+## To improve
+
+Perhaps find a way to package Lua itself into an .npm?
+
+And, perhaps, also Pluto
+
+https://chromium.googlesource.com/external/skia/gyp/+/master/lua.gyp
+https://code.google.com/p/gyp/wiki/GypUserDocumentation\
+
+
+https://github.com/andzdroid/mongo-express
 
 
 ## License
