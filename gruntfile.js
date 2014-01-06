@@ -33,7 +33,8 @@ module.exports = function(grunt) {
         },
         jshint: {
             all: {
-                src: ['gruntfile.js', 'server.js', 'app/**/*.js', 'public/js/**', 'test/**/*.js'],
+                src: ['gruntfile.js', 'server.js', 'app/**/*.js',
+                'public/js/**', 'test/**/*.js','!test/coverage/**','!test/busted/**'],
                 options: {
                     jshintrc: true
                 }
@@ -87,11 +88,11 @@ module.exports = function(grunt) {
 
     var shell = require('shelljs');
 
-    grunt.registerTask('busted:test', "Run lua unit tests", function() {
+    grunt.registerTask('busted:test', 'Run lua unit tests', function() {
         var folders = grunt.config('busted.src') || ['test/busted'];
         var pattern = grunt.config('busted.pattern') || '.lua';
         for (var i = 0; i < folders.length; i++){
-          shell.exec('busted -p \'' + pattern + '\' '  + folders[i]);
+            shell.exec('busted -p \'' + pattern + '\' '  + folders[i]);
         }
     });
 

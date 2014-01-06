@@ -32,18 +32,19 @@ describe('<Unit Test>', function() {
        
         describe('Pluto', function() {
             it('should load Pluto', function(done) {
-                var result = luaState.doString('return require(\'pluto\')', function(error, ret_value){
+                luaState.doString('return require(\'pluto\')', function(error, ret_value){
                     should.not.exist(error);
                     should.ok(ret_value);
                     should.exist(luaState.getGlobal('pluto'));
 
                     done();
                 });
+
             });
 
 
             it('should serialize and deserialize a coroutine correctly', function(done) {
-                var result = luaState.doFile(luaFile, function(error, ret_value){
+                luaState.doFile(luaFile, function(error, ret_value){
                     should.not.exist(error);
                     should.ok(ret_value);
                     should(ret_value.a['5']).equal(5);
