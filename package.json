@@ -37,8 +37,7 @@
     "grunt": "latest",
     "grunt-cli": "latest",
     "grunt-env": "latest",
-    "forever": "latest",
-    "nodelua": "~0.3.1"
+    "forever": "latest"
   },
   "devDependencies": {
     "supertest": "latest",
