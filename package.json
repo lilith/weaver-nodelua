@@ -38,7 +38,6 @@
     "grunt-cli": "latest",
     "grunt-env": "latest",
     "forever": "latest",
-    "nodelua": "~0.3.1",
     "node-uuid": "~1.4.1"
   },
   "devDependencies": {
