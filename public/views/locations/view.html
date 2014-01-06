@@ -1,0 +1,14 @@
+<section data-ng-controller="LocationsController" data-ng-init="findOne()">
+    
+    <span>{{location.creator.name}}</span>
+    <h2>{{location.title}}</h2>
+    <div>
+        <a class="btn" href="/#!/locations/{{location._id}}/edit">
+        	<i class="icon-edit"></i>
+        </a> 
+        <a class="btn" data-ng-click="remove();">
+            <i class="icon-trash"></i>
+        </a>
+    </div>
+    <div>{{location.text}}</div>
+</section>

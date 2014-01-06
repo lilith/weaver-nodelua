@@ -72,6 +72,18 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
 
+
+    var locations = require('../app/controllers/locations');
+    app.get('/locations', locations.all);
+    app.post('/locations', auth.requiresLogin, locations.create);
+    app.get('/locations/:locationId', locations.show);
+    app.put('/locations/:locationId', auth.requiresLogin, locations.update);
+    app.del('/locations/:locationId', auth.requiresLogin, locations.destroy);
+
+    //Finish with setting up the articleId param
+    app.param('locationId', locations.location);
+
+
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);

@@ -1,0 +1,28 @@
+<section data-ng-controller="LocationsController">
+	<form class="form-horizontal" data-ng-submit="create()">
+
+		<div class="control-group">
+			<label class="control-label" for="text">Content</label>
+			<div class="controls">
+				<textarea data-ng-model="text" id="text" cols="30" rows="10" placeholder="Content"></textarea>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="title">Title</label>
+			<div class="controls">
+				<input type="text" data-ng-model="title" id="title" placeholder="Title" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label" for="name">Name</label>
+			<div class="controls">
+				<input type="text" data-ng-model="name" id="name" placeholder="name" required>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">
+				<input type="submit" class="btn">
+			</div>
+		</div>
+	</form>
+</section>

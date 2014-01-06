@@ -1,0 +1,11 @@
+<section data-ng-controller="LocationsController" data-ng-init="find()">
+	<ul class="locations unstyled">
+		<li data-ng-repeat="location in locations">
+			
+			<span>{{location.creator.name}}</span>
+			<h2><a data-ng-href="#!/locations/{{location._id}}">{{location.title}}</a></h2>
+			<div>{{location.content}}</div>
+		</li>
+	</ul>
+	<h1 data-ng-hide="!location || location.length">No location yet. <br> Why don't you <a href="/#!/locations/create">Create One</a>?</h1>
+</section>
