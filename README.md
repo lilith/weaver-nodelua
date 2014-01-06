@@ -10,11 +10,17 @@ This branch of the weaver engine framework is based on Node and Lua. The app fra
 Prereq: NPM, Bower, Grunt, Lua, Pluto, and Busted
 
 
-heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+heroku config:add BUILDPACK_URL=https://github.com/nathanaeljones/heroku-buildpack-multi.git
+
+heroku config:set NODE_ENV=production
+heroku config:set GOOGLE_APP_ID=
+heroku config:set GOOGLE_APP_SECRET=
 
 
 
 ## To improve
+
+https://github.com/LearnBoost/mongoose/issues/1026
 
 Perhaps find a way to package Lua itself into an .npm?
 
