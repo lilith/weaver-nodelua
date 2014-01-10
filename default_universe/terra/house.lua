@@ -41,3 +41,6 @@ function outside()
 				"world.town.center"
 				})
 end
+
+function test()
+end
